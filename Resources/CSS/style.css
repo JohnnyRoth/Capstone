@@ -125,7 +125,8 @@ nav span {
 }
 
 .box-one img {
-  height: 50%;
+  width: 100%;
+  height: auto;
   margin-right: 24px;
   margin-bottom: 32px;
 }
@@ -179,6 +180,11 @@ nav span {
   display: inline-flex;
   flex-direction: column;
   background-color: white;
+  width: 30%;
+}
+
+.small-flex-container img {
+  width: 100%;
 }
 
 
@@ -205,9 +211,10 @@ nav span {
 }
 
 .box-1 video {
-  height: 50%;
   margin-right: 24px;
   margin-bottom: 24px;
+  width: 100%;
+  height: auto;
 }
 
 .box-2 {
