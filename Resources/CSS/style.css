@@ -11,8 +11,8 @@ h1 {
 }
 
 h4 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.9rem;
+  font-weight: bold;
   color: black;
 }
 
@@ -49,9 +49,13 @@ header {
   align-items: center;
   display: flex;
   align-items: center;
-  height: 32px;
-  margin-left: 24px;
+  height: 2rem;
+  margin-left: 1.5rem;
   font-weight: bold;
+}
+
+.logo .mobile-image {
+  display: none;
 }
 
 .logo .grey {
@@ -59,11 +63,27 @@ header {
 }
 
 nav {
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 
 nav span {
-  margin-left: 16px;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+  header nav,
+  header span {
+    display: none;
+  }
+
+  .logo .mobile-image {
+    display: inline-block;
+  }
+
+  .logo {
+    justify-content: space-between;
+    margin-right: 1.5rem;
+  }
 }
 
 
@@ -76,7 +96,7 @@ nav span {
 
 .banner-image {
   width: 60%;
-  margin: 32px 24px;
+  margin: 2rem 1.5rem;
 }
 
 .banner-image img {
@@ -85,7 +105,7 @@ nav span {
 
 .text-container h1,
 .text-container h4 {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .text-container {
@@ -104,40 +124,82 @@ nav span {
   display: block;
 }
 
+@media only screen and (max-width: 470px) {
+  .flex-container.banner1 {
+    flex-wrap: wrap;
+  }
+
+  .banner1 .banner-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-image {
+    margin: 0px;
+  }
+
+  .banner1 .text-container {
+    max-width: 100%;
+  }
+
+  .banner1 .text-container h1,
+  .banner1 .text-container h4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0px;
+  }
+
+  .banner1 .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .banner1 .text-container h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .banner1 .text-container p {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
 
 /* Second Banner Section */
 
 .sb-flex-container {
   display: flex;
-  margin: 32px 0px 0px 24px;
 }
 
 .box-one {
   display: inline-flex;
   width: 60%;
   flex-direction: column;
+  margin: 2rem 1.5rem;
 }
 
 .box-two {
   display: inline-flex;
   flex-direction: column;
   width: 40%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .box-one img {
   width: 100%;
   height: auto;
-  margin-right: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .box-one h2 {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .paragraph {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .mini-box {
@@ -149,11 +211,60 @@ nav span {
 .mini-box img {
   width: 35%;
   height: 100%;
+  padding: 1rem;
+}
+
+.background {
+  background-color: LightGrey;
 }
 
 .mini-mini {
   width: 65%;
   text-align: center;
+}
+
+.mini-mini .blue {
+  font-size: 1.25rem;
+}
+
+.mini-mini h4,
+.mini-mini p {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+  .box-one {
+    display: none;
+  }
+
+  .box-two {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .mini-box {
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+
+  .mini-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mini-mini {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .mini-mini h4,
+  .mini-mini p {
+    margin-top: 0.5rem;
+  }
+
+  .box-two .background {
+    background-color: white;
+  }
 }
 
 
@@ -165,13 +276,16 @@ nav span {
 
 .sl-section h2 {
   text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid LightGrey;
+  margin-bottom: 2rem;
 }
 
 .big-flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
   padding-left: 72px;
   padding-right: 72px;
 }
@@ -187,17 +301,66 @@ nav span {
   width: 100%;
 }
 
+.small-flex-container h4,
+.small-flex-container p {
+  margin-left: 1rem;
+}
+
+.small-flex-container h4 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.small-flex-container p {
+  margin-top: 0.5rem;
+  color: darkgrey;
+}
+
+.small-flex-container.margin-right {
+  margin-right: 2rem;
+}
+
+.small-flex-container.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.alt-ls {
+  display: none;
+}
+
+@media only screen and (max-width: 470px) {
+  .sl-section {
+    background-color: white;
+  }
+
+  .sl-section .big-flex-container {
+    display: none;
+  }
+
+  .alt-ls {
+    display: block;
+  }
+
+  .alt-ls p {
+    font-size: 1.3rem;
+    background-color: LightGrey;
+    font-weight: 600;
+    margin: 1rem 0.75rem 0.5rem 0.75rem;
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+
 
 /* Thesis Exhibit */
 
 .te-section {
-  margin-left: 24px;
+  margin-left: 1.5rem;
 }
 
 .te-section h2 {
   text-align: center;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .te-flex-container {
@@ -208,13 +371,18 @@ nav span {
   display: inline-flex;
   flex-direction: column;
   width: 60%;
+  margin-right: 1.5rem;
 }
 
 .box-1 video {
-  margin-right: 24px;
-  margin-bottom: 24px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   height: auto;
+}
+
+.box-1 h4 {
+  margin-bottom: 0.5rem;
 }
 
 .box-2 {
@@ -231,15 +399,49 @@ nav span {
 .little-box img {
   width: 35%;
   height: 100%;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .little-little-box {
   width: 65%;
 }
 
+.little-little-box h4 {
+  margin-bottom: 0.5rem;
+}
+
 .little-box-1 {
   background-color: darkgrey;
+}
+
+.bottom-p {
+  margin-bottom: 1.5rem;
+}
+
+.alt-te {
+  display: none;
+}
+
+@media only screen and (max-width: 470px) {
+  .te-flex-container {
+    display: none;
+  }
+
+  .alt-te {
+    display: inline-block;
+  }
+
+  .te-section h2 {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid LightGrey;
+  }
+
+  .te-section video {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
@@ -257,13 +459,25 @@ footer span {
 
 .span1 {
   flex-grow: 1;
-  margin-left: 24px;
+  margin-left: 1.5rem;
 }
 
 .span2 {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .span3 {
-  margin-right: 16px;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+  footer {
+    border-top: none;
+    margin-top: 2rem;
+  }
+
+  footer .span2,
+  footer .span3 {
+    display: none;
+  }
 }
